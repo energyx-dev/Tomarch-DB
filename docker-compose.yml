@@ -1,0 +1,19 @@
+version: '3.7'
+services:
+  mysql:
+    container_name: 'tomarch'
+    image: mysql:8.0.33
+    ports:
+      - '3306:3306'
+    volumes:
+      - mysql_db:/var/lib/mysql
+    environment:
+      - TZ=Asia/Seoul
+      - LC_ALL=C.UTF-8
+      - MYSQL_USER=admin
+      - MYSQL_PASSWORD=energyx1!
+      - MYSQL_DATABASE=test
+      - MYSQL_ROOT_PASSWORD=energyx1!
+
+volumes:
+  mysql_db:
